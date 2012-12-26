@@ -1,4 +1,5 @@
-package Task::BeLike::FIBO 0.00;
+package Task::BeLike::FIBO;
+our $VERSION = '0.01_01';
 1
 __END__
 
