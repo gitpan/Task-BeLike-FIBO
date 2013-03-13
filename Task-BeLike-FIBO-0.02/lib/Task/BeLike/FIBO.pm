@@ -1,6 +1,9 @@
 package Task::BeLike::FIBO;
-our $VERSION = '0.01_01';
-1
+
+our $VERSION = '0.02';
+
+1;
+
 __END__
 
 =head1 NAME
