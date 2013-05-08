@@ -39,4 +39,4 @@ requires:
   Throwable::Error: 0.102080
   YAML: 0.84
   boolean: 0.28
-version: 0.004
+version: 20130508

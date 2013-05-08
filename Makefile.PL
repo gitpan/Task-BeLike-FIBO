@@ -48,9 +48,9 @@ my %WriteMakefileArgs = (
     "boolean" => "0.28"
   },
   "TEST_REQUIRES" => {},
-  "VERSION" => "0.004",
+  "VERSION" => 20130508,
   "test" => {
-    "TESTS" => "t/*.t"
+    "TESTS" => ""
   }
 );
 

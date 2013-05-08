@@ -5,4 +5,3 @@ Makefile.PL
 README
 dist.ini
 lib/Task/BeLike/FIBO.pm
-t/use_ok.t
