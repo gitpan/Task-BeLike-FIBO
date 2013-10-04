@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Leonardo Pisano a.k.a. Fibonacci",
+  "ABSTRACT" => "Leonardo Pisano a.k.a. Fibonacci\r",
   "AUTHOR" => "G. Casati <fibo\@cpan.org>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
@@ -25,14 +25,14 @@ my %WriteMakefileArgs = (
     "DBI" => "1.623",
     "DBIx::Class" => "0.08200",
     "DBIx::Class::Schema::Loader" => "0.07033",
-    "Dist::Zilla" => "4.300028",
-    "Dist::Zilla::MintingProfile::Author::FIBO" => 20130507,
+    "Dist::Zilla::MintingProfile::Author::FIBO" => 20130523,
     "File::HomeDir" => "1.00",
     "List::MoreUtils" => "0.33",
     "List::Util" => "1.25",
     "Mojolicious" => "4.0",
     "Moose" => "2.0604",
     "MooseX::ClassAttribute" => "0.26",
+    "MooseX::ConfigFromFile" => "0.12",
     "MooseX::Types::Path::Class" => "0.06",
     "MooseX::Types::Structured" => "0.28",
     "Path::Class" => "0.29",
@@ -47,7 +47,7 @@ my %WriteMakefileArgs = (
     "boolean" => "0.28"
   },
   "TEST_REQUIRES" => {},
-  "VERSION" => 20130523,
+  "VERSION" => 20131004,
   "test" => {
     "TESTS" => ""
   }

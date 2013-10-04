@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Task::BeLike::FIBO;
 {
-  $Task::BeLike::FIBO::VERSION = '20130523';
+  $Task::BeLike::FIBO::VERSION = '20131004';
 }
 # ABSTRACT: Leonardo Pisano a.k.a. Fibonacci
 
@@ -67,6 +67,10 @@ L<Moose> 2.0604
 =item *
 
 L<MooseX::ClassAttribute> 0.26
+
+=item *
+
+L<MooseX::ConfigFromFile> 0.12
 
 =item *
 
