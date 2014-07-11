@@ -1,41 +1,29 @@
 ---
-abstract: "Leonardo Pisano a.k.a. Fibonacci\r"
+abstract: 'Leonardo Pisano a.k.a. Fibonacci'
 author:
   - 'G. Casati <fibo@cpan.org>'
-build_requires: {}
+build_requires:
+  ExtUtils::MakeMaker: '0'
+  Test::More: '1'
+  Test::Pod: '1'
 configure_requires:
-  ExtUtils::MakeMaker: 6.30
-dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.120921'
-license: perl
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.141520'
+license: unknown
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Task-BeLike-FIBO
+no_index:
+  directory:
+    - t
+    - inc
 requires:
-  App::cpanminus: 1.5019
-  CPAN: 2.00
-  DBI: 1.623
-  DBIx::Class: 0.08200
-  DBIx::Class::Schema::Loader: 0.07033
-  Dist::Zilla::MintingProfile::Author::FIBO: 20130523
-  File::HomeDir: 1.00
-  List::MoreUtils: 0.33
-  List::Util: 1.25
-  Mojolicious: 4.0
-  Moose: 2.0604
-  MooseX::ClassAttribute: 0.26
-  MooseX::ConfigFromFile: 0.12
-  MooseX::Types::Path::Class: 0.06
-  MooseX::Types::Structured: 0.28
-  Path::Class: 0.29
-  Perl::Critic: 1.118
-  Perl::Critic::Bangs: 1.10
-  Perl::Tidy: 20121207
-  Scalar::Util: 1.25
-  Test::More: 0.98
-  Test::use::ok: 0.11
-  Throwable::Error: 0.102080
-  YAML: 0.84
-  boolean: 0.28
-version: 20131004
+  CPAN: '2'
+  ExtUtils::MakeMaker: '6.64'
+  Moose: '2'
+  Test::Compile: '1'
+  Test::More: '1'
+  Test::Pod: '1'
+version: '0.1'

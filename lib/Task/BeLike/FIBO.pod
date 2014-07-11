@@ -1,0 +1,41 @@
+
+=head1 NAME
+
+Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
+
+=head1 STUFF INCLUDED
+
+=over 4
+
+=item *
+
+L<CPAN>
+
+=item *
+
+L<ExtUtils::MakeMaker>
+
+=item *
+
+L<Moose>
+
+=item *
+
+L<Perl::Tidy>
+
+=item *
+
+L<Test::Compile>
+
+=item *
+
+L<Test::More>
+
+=item *
+
+L<Test::Pod>
+
+=back
+
+=cut
+
