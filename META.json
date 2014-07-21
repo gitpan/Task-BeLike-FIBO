@@ -4,7 +4,7 @@
       "G. Casati <fibo@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.141520",
+   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.141520",
    "license" : [
       "unknown"
    ],
@@ -22,9 +22,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "0",
-            "Test::More" : "1",
-            "Test::Pod" : "1"
+            "ExtUtils::MakeMaker" : "0"
          }
       },
       "configure" : {
@@ -36,7 +34,6 @@
          "requires" : {
             "CPAN" : "2",
             "ExtUtils::MakeMaker" : "6.64",
-            "Moose" : "2",
             "Test::Compile" : "1",
             "Test::More" : "1",
             "Test::Pod" : "1"
@@ -44,5 +41,16 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.1"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://github.com/fibo/Task-BeLike-FIBO-pm/issues"
+      },
+      "license" : [
+         "http://fibo.mit-license.org/"
+      ],
+      "repository" : {
+         "url" : "http://github.com/fibo/Task-BeLike-FIBO-pm"
+      }
+   },
+   "version" : "0.2"
 }

@@ -4,12 +4,10 @@ author:
   - 'G. Casati <fibo@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: '0'
-  Test::More: '1'
-  Test::Pod: '1'
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.141520'
+generated_by: 'ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.141520'
 license: unknown
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -22,8 +20,11 @@ no_index:
 requires:
   CPAN: '2'
   ExtUtils::MakeMaker: '6.64'
-  Moose: '2'
   Test::Compile: '1'
   Test::More: '1'
   Test::Pod: '1'
-version: '0.1'
+resources:
+  bugtracker: http://github.com/fibo/Task-BeLike-FIBO-pm/issues
+  license: http://fibo.mit-license.org/
+  repository: http://github.com/fibo/Task-BeLike-FIBO-pm
+version: '0.2'

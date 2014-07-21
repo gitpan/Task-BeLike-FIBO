@@ -1,7 +1,173 @@
 
+=encoding utf8
+
 =head1 NAME
 
 Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
+
+=head1 SYNOPSIS
+
+    cpan Task::BeLike::FIBO
+    perldoc Task::BeLike::FIBO
+
+=head1 DESCRIPTION
+
+Hi! I am an italian mathematician. I graduated in 2005 at L<Università degli Studi di Genova | http://www.dima.unige.it/> and since then I work doing Business Intelligence. My boss said: you need Perl. So I started using this language. I like many programming languages, but, Perl really help me to pay my rent.
+
+This is a primary about my habits when I write Perl code.
+
+=head1 PACKAGE GUIDELINES
+
+Do not get crazy with automatic generators. I am a mathematician and a coder, not a corporation.
+Every package is different and has different needings. The followings are samples for files I usually need in a package.
+
+Just use copy and paste and your brain!
+
+The smack of a L<DRY | http://en.wikipedia.org/wiki/Don't_repeat_yourself> L<KISS | http://en.wikipedia.org/wiki/KISS_principle> is not that bad.
+
+=head2 WORKFLOW
+
+=over 4
+
+=item *
+
+Start a feature branch
+
+    git checkout -b somefeature
+
+=item *
+
+Write documentation about new feature. Then write tests to check it and code to implement it.
+
+=item *
+
+Run tests
+
+    prove -l --state=save
+
+=item *
+
+If some test does not pass, fix code and run tests that failed
+
+    prove -l --state=save,failed
+
+=item *
+
+Merge feature branch and commit work
+
+    git checkout master
+    git merge somefeature
+    git push
+
+=item *
+
+Create new version package
+
+    perl Makefile.PL
+    make
+    make test
+    make manifest
+    make dist
+    make realclean
+
+=item *
+
+Upload to L<PAUSE | http://pause.perl.org/>
+
+Just do it manually! Yes, using your browser ... and remember to delete old files.
+
+=back
+
+=head2 FILES
+
+=over 4
+
+=item *
+
+README.md
+
+    My-Package
+    ==========
+
+    [![Build Status](https://travis-ci.org/fibo/My-Package-pm.svg)](https://travis-ci.org/fibo/My/Package-pm)
+
+    See [online docs](https://metacpan.org/pod/My::Package)
+
+=item *
+
+.travis.yml
+
+    language: perl
+    perl:
+      - "5.18"
+      - "5.16"
+      - "5.14"
+      - "5.12"
+      - "5.10"
+      - "5.8"
+
+=item *
+
+.gitignore
+
+    .*
+    *~
+    !.gitignore
+    !.travis.yml
+    blib
+    pm_to_blib
+    Makefile*
+    !Makefile.PL
+    MANIFEST*
+    !MANIFEST.SKIP
+    *META.*
+    *.tar.gz
+
+=item *
+
+Makefile.PL
+
+    use strict;
+    use warnings;
+
+    use ExtUtils::MakeMaker 6.64;
+
+    WriteMakefile(
+        ABSTRACT_FROM => 'lib/My/Package.pm',
+        VERSION_FROM  => 'lib/My/Package.pm',
+        AUTHOR        => 'G. Casati <fibo@cpan.org>',
+        NAME          => 'My-Package',
+        META_MERGE => {
+          resources => {
+            homepage   => 'https://metacpan.org/pod/My::Package'
+            license    => 'http://fibo.mit-license.org/',
+            repository => 'http://github.com/fibo/My-Package-pm',
+            bugtracker => 'http://github.com/fibo/My-Package-pm/issues',
+        },
+        PREREQ_PM => {
+            # 'Some::Package' => '0',
+            # 'Other::Package' => '1.2.3',
+        },
+        test => { TESTS => 't/*.t' },
+        TEST_REQUIRES => {
+            'Test::More' => '1',
+            'Test::Pod'  => '1',
+        },
+    );
+
+=item *
+
+MANIFEST.SKIP
+
+    ^\.
+    .*\.old$
+    \.tar\.gz$
+    ^Makefile$
+    ^MYMETA\.
+    ^blib
+    ^pm_to_blib
+
+=back
 
 =head1 STUFF INCLUDED
 
@@ -11,21 +177,36 @@ Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
 L<CPAN>
 
-=item *
-
-L<ExtUtils::MakeMaker>
+See how to setup L<A CPAN client that works like a charm|http://blog.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html>.
 
 =item *
 
-L<Moose>
+L<ExtUtils::MakeMaker> version gt 6.96, cause I use the C<TEST_REQUIRES> option.
 
 =item *
 
 L<Perl::Tidy>
 
+Use L<Perl::Tidy> defaults to indent occasionally. Do not indent every source file automatically, indent by hand and use your creativity.
+
+See Perl section in L<My Vim preferences|http://blog.g14n.info/2013/07/my-vim-configuration.html#perl> to see how you can use L<Perl::Tidy> with Vim.
+
 =item *
 
 L<Test::Compile>
+
+Create a C<t/_compile.t> file
+
+    use strict;
+    use warnings;
+    use Test::More;
+    
+    eval "use Test::Compile";
+    Test::More->builder->BAIL_OUT(<<EOF) if $@;
+    Test::Compile required for testing compilation
+    EOF
+
+    all_pm_files_ok();
 
 =item *
 
@@ -34,6 +215,19 @@ L<Test::More>
 =item *
 
 L<Test::Pod>
+
+Create a C<t/_pod.t> file
+
+    use strict;
+    use warnings;
+    use Test::More;
+    
+    eval "use Test::Pod";
+    Test::More->builder->BAIL_OUT(<<EOF) if $@;
+    Test::Pod required for testing compilation
+    EOF
+    
+    all_pod_files_ok();
 
 =back
 
