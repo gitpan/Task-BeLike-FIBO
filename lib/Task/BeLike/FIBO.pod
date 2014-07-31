@@ -12,7 +12,7 @@ Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
 =head1 DESCRIPTION
 
-Hi! I am an italian mathematician. I graduated in 2005 at L<Università degli Studi di Genova | http://www.dima.unige.it/> and since then I work doing Business Intelligence. My boss said: you need Perl. So I started using this language. I like many programming languages, but, Perl really help me to pay my rent.
+Hi! I am L<FIBO | https://metacpan.org/author/FIBO> an italian mathematician. I graduated in 2005 at L<Università degli Studi di Genova | http://www.dima.unige.it/> and since then I work doing Business Intelligence and Web Analytics. My boss said: you need Perl. So I started using this language. I like many programming languages, but, Perl really help me to pay my rent.
 
 This is a primary about my habits when I write Perl code.
 
@@ -24,6 +24,8 @@ Every package is different and has different needings. The followings are sample
 Just use copy and paste and your brain!
 
 The smack of a L<DRY | http://en.wikipedia.org/wiki/Don't_repeat_yourself> L<KISS | http://en.wikipedia.org/wiki/KISS_principle> is not that bad.
+
+Learn from nature: stay as minimal as possible.
 
 =head2 WORKFLOW
 
@@ -55,6 +57,7 @@ If some test does not pass, fix code and run tests that failed
 
 Merge feature branch and commit work
 
+    git rebase master
     git checkout master
     git merge somefeature
     git push
@@ -89,9 +92,14 @@ README.md
     My-Package
     ==========
 
-    [![Build Status](https://travis-ci.org/fibo/My-Package-pm.svg)](https://travis-ci.org/fibo/My/Package-pm)
+    My-Package description ...
 
     See [online docs](https://metacpan.org/pod/My::Package)
+
+    --------
+    [![Build Status](https://travis-ci.org/fibo/My-Package-pm.png?branch=master)](https://travis-ci.org/fibo/My-Package-pm)
+    [![Coverage Status](https://coveralls.io/repos/fibo/My-Package-pm/badge.png?branch=master)](https://coveralls.io/r/fibo/My-Package-pm?branch=master)
+    [![CPAN version](https://badge.fury.io/pl/My-Package-pm.svg)](https://metacpan.org/pod/My::Package)
 
 =item *
 
@@ -150,6 +158,7 @@ Makefile.PL
         },
         test => { TESTS => 't/*.t' },
         TEST_REQUIRES => {
+            'Test::Compile' => '1',
             'Test::More' => '1',
             'Test::Pod'  => '1',
         },
@@ -181,15 +190,15 @@ See how to setup L<A CPAN client that works like a charm|http://blog.g14n.info/2
 
 =item *
 
-L<ExtUtils::MakeMaker> version gt 6.96, cause I use the C<TEST_REQUIRES> option.
+L<ExtUtils::MakeMaker> version C<6.64>, cause I use the C<TEST_REQUIRES> option.
 
 =item *
 
 L<Perl::Tidy>
 
-Use L<Perl::Tidy> defaults to indent occasionally. Do not indent every source file automatically, indent by hand and use your creativity.
+Use L<Perl::Tidy> defaults. Do not indent every source file automatically, indent by hand and use your creativity.
 
-See Perl section in L<My Vim preferences|http://blog.g14n.info/2013/07/my-vim-configuration.html#perl> to see how you can use L<Perl::Tidy> with Vim.
+See Perl section in L<My Vim preferences|http://blog.g14n.info/2013/07/my-vim-configuration.html#perl> to see how you can use L<perltidy> with Vim.
 
 =item *
 

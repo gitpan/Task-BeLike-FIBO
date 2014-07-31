@@ -20,11 +20,13 @@ no_index:
 requires:
   CPAN: '2'
   ExtUtils::MakeMaker: '6.64'
+  Perl::Tidy: '20140328'
   Test::Compile: '1'
   Test::More: '1'
   Test::Pod: '1'
 resources:
   bugtracker: http://github.com/fibo/Task-BeLike-FIBO-pm/issues
+  homepage: https://metacpan.org/pod/Task::BeLike::FIBO
   license: http://fibo.mit-license.org/
   repository: http://github.com/fibo/Task-BeLike-FIBO-pm
-version: '0.2'
+version: '0.3'
