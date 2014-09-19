@@ -1,5 +1,6 @@
 lib/Task/BeLike/FIBO.pod
 Makefile.PL
 MANIFEST			This list of files
+MANIFEST.bak
 MANIFEST.SKIP
 t/_pod.t

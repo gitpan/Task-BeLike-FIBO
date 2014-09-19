@@ -64,7 +64,9 @@ Merge feature branch and commit work
 
 =item *
 
-Create new version package
+Update version, use L<Semantic Versioning | http://semver.org/>.
+
+Create a new release
 
     perl Makefile.PL
     make
@@ -148,7 +150,7 @@ Makefile.PL
         META_MERGE => {
           resources => {
             homepage   => 'https://metacpan.org/pod/My::Package'
-            license    => 'http://fibo.mit-license.org/',
+            license    => 'http://www.g14n.info/mit-license',
             repository => 'http://github.com/fibo/My-Package-pm',
             bugtracker => 'http://github.com/fibo/My-Package-pm/issues',
         },
@@ -186,7 +188,7 @@ MANIFEST.SKIP
 
 L<CPAN>
 
-See how to setup L<A CPAN client that works like a charm|http://blog.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html>.
+See how to setup L<A CPAN client that works like a charm|http://www.g14n.info/2014/03/a-cpan-client-that-works-like-charm.html>.
 
 =item *
 
@@ -198,7 +200,7 @@ L<Perl::Tidy>
 
 Use L<Perl::Tidy> defaults. Do not indent every source file automatically, indent by hand and use your creativity.
 
-See Perl section in L<My Vim preferences|http://blog.g14n.info/2013/07/my-vim-configuration.html#perl> to see how you can use L<perltidy> with Vim.
+See Perl section in L<My Vim preferences|http://www.g14n.info/2013/07/my-vim-configuration.html#perl> to see how you can use L<perltidy> with Vim.
 
 =item *
 

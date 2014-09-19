@@ -48,11 +48,11 @@
       },
       "homepage" : "https://metacpan.org/pod/Task::BeLike::FIBO",
       "license" : [
-         "http://fibo.mit-license.org/"
+         "http://www.g14n.info/mit-license"
       ],
       "repository" : {
          "url" : "http://github.com/fibo/Task-BeLike-FIBO-pm"
       }
    },
-   "version" : "0.3"
+   "version" : "0.4"
 }

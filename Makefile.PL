@@ -5,13 +5,13 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     ABSTRACT_FROM => 'lib/Task/BeLike/FIBO.pod',
-    VERSION       => '0.3',
+    VERSION       => '0.4',
     AUTHOR        => 'G. Casati <fibo@cpan.org>',
     NAME          => 'Task-BeLike-FIBO',
     META_MERGE => {
       resources => {
         homepage   => 'https://metacpan.org/pod/Task::BeLike::FIBO',
-        license    => 'http://fibo.mit-license.org/',
+        license    => 'http://www.g14n.info/mit-license',
         repository => 'http://github.com/fibo/Task-BeLike-FIBO-pm',
         bugtracker => 'http://github.com/fibo/Task-BeLike-FIBO-pm/issues'
       },
