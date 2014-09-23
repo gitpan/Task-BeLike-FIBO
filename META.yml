@@ -29,4 +29,4 @@ resources:
   homepage: https://metacpan.org/pod/Task::BeLike::FIBO
   license: http://www.g14n.info/mit-license
   repository: http://github.com/fibo/Task-BeLike-FIBO-pm
-version: '0.4'
+version: '0.5'

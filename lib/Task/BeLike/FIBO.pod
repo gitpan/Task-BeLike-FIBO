@@ -14,7 +14,7 @@ Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
 Hi! I am L<FIBO | https://metacpan.org/author/FIBO> an italian mathematician. I graduated in 2005 at L<Università degli Studi di Genova | http://www.dima.unige.it/> and since then I work doing Business Intelligence and Web Analytics. My boss said: you need Perl. So I started using this language. I like many programming languages, but, Perl really help me to pay my rent.
 
-This is a primary about my habits when I write Perl code.
+This is a primary about my habits and a collection of modules I use when I write Perl code.
 
 =head1 PACKAGE GUIDELINES
 
@@ -99,9 +99,9 @@ README.md
     See [online docs](https://metacpan.org/pod/My::Package)
 
     --------
+    [![CPAN version](https://badge.fury.io/pl/My-Package-pm.svg)](https://metacpan.org/pod/My::Package)
     [![Build Status](https://travis-ci.org/fibo/My-Package-pm.png?branch=master)](https://travis-ci.org/fibo/My-Package-pm)
     [![Coverage Status](https://coveralls.io/repos/fibo/My-Package-pm/badge.png?branch=master)](https://coveralls.io/r/fibo/My-Package-pm?branch=master)
-    [![CPAN version](https://badge.fury.io/pl/My-Package-pm.svg)](https://metacpan.org/pod/My::Package)
 
 =item *
 
@@ -170,8 +170,11 @@ Makefile.PL
 
 MANIFEST.SKIP
 
+    ^MANIFEST\.SKIP$
+    ^MANIFEST\.bak$
     ^\.
     .*\.old$
+    .*\.bak$
     \.tar\.gz$
     ^Makefile$
     ^MYMETA\.

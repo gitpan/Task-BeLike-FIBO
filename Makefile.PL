@@ -5,7 +5,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     ABSTRACT_FROM => 'lib/Task/BeLike/FIBO.pod',
-    VERSION       => '0.4',
+    VERSION       => '0.5',
     AUTHOR        => 'G. Casati <fibo@cpan.org>',
     NAME          => 'Task-BeLike-FIBO',
     META_MERGE => {
