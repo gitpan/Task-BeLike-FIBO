@@ -4,6 +4,9 @@ author:
   - 'G. Casati <fibo@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: '0'
+  Test::Compile: '1'
+  Test::More: '1'
+  Test::Pod: '1'
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 1
@@ -19,14 +22,15 @@ no_index:
     - inc
 requires:
   CPAN: '2'
+  CPAN::Uploader: '0.103007'
   ExtUtils::MakeMaker: '6.64'
   Perl::Tidy: '20140328'
   Test::Compile: '1'
   Test::More: '1'
   Test::Pod: '1'
 resources:
-  bugtracker: http://github.com/fibo/Task-BeLike-FIBO-pm/issues
+  bugtracker: https://github.com/fibo/Task-BeLike-FIBO-pm/issues
   homepage: https://metacpan.org/pod/Task::BeLike::FIBO
-  license: http://www.g14n.info/mit-license
-  repository: http://github.com/fibo/Task-BeLike-FIBO-pm
-version: '0.7'
+  license: http://g14n.info/mit-license
+  repository: https://github.com/fibo/Task-BeLike-FIBO-pm
+version: '0.8'

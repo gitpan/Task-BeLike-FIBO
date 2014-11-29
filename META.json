@@ -22,7 +22,10 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "0"
+            "ExtUtils::MakeMaker" : "0",
+            "Test::Compile" : "1",
+            "Test::More" : "1",
+            "Test::Pod" : "1"
          }
       },
       "configure" : {
@@ -33,6 +36,7 @@
       "runtime" : {
          "requires" : {
             "CPAN" : "2",
+            "CPAN::Uploader" : "0.103007",
             "ExtUtils::MakeMaker" : "6.64",
             "Perl::Tidy" : "20140328",
             "Test::Compile" : "1",
@@ -44,15 +48,15 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "http://github.com/fibo/Task-BeLike-FIBO-pm/issues"
+         "web" : "https://github.com/fibo/Task-BeLike-FIBO-pm/issues"
       },
       "homepage" : "https://metacpan.org/pod/Task::BeLike::FIBO",
       "license" : [
-         "http://www.g14n.info/mit-license"
+         "http://g14n.info/mit-license"
       ],
       "repository" : {
-         "url" : "http://github.com/fibo/Task-BeLike-FIBO-pm"
+         "url" : "https://github.com/fibo/Task-BeLike-FIBO-pm"
       }
    },
-   "version" : "0.7"
+   "version" : "0.8"
 }
