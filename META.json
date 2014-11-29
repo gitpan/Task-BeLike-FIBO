@@ -4,7 +4,7 @@
       "G. Casati <fibo@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.141520",
+   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.142690",
    "license" : [
       "unknown"
    ],
@@ -54,5 +54,5 @@
          "url" : "http://github.com/fibo/Task-BeLike-FIBO-pm"
       }
    },
-   "version" : "0.5"
+   "version" : "0.7"
 }

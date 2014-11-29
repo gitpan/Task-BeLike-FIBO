@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.141520'
+generated_by: 'ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.142690'
 license: unknown
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -29,4 +29,4 @@ resources:
   homepage: https://metacpan.org/pod/Task::BeLike::FIBO
   license: http://www.g14n.info/mit-license
   repository: http://github.com/fibo/Task-BeLike-FIBO-pm
-version: '0.5'
+version: '0.7'
