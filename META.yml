@@ -28,9 +28,10 @@ requires:
   Test::Compile: '1'
   Test::More: '1'
   Test::Pod: '1'
+  perl: '5.008000'
 resources:
   bugtracker: https://github.com/fibo/Task-BeLike-FIBO-pm/issues
   homepage: https://metacpan.org/pod/Task::BeLike::FIBO
-  license: http://g14n.info/mit-license
+  license: http://g14n.info/artistic-license
   repository: https://github.com/fibo/Task-BeLike-FIBO-pm
-version: '0.8'
+version: '0.9'
