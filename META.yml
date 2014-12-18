@@ -3,15 +3,15 @@ abstract: 'Leonardo Pisano a.k.a. Fibonacci'
 author:
   - 'G. Casati <fibo@cpan.org>'
 build_requires:
-  ExtUtils::MakeMaker: '0'
-  Test::Compile: '1'
-  Test::More: '1'
-  Test::Pod: '1'
+  ExtUtils::MakeMaker: '6.64'
+  Test::Compile: v1.2.1
+  Test::More: '1.001009'
+  Test::Pod: '1.48'
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 1
 generated_by: 'ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.142690'
-license: unknown
+license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: '1.4'
@@ -21,17 +21,17 @@ no_index:
     - t
     - inc
 requires:
-  CPAN: '2'
+  CPAN: '2.05'
   CPAN::Uploader: '0.103007'
   ExtUtils::MakeMaker: '6.64'
   Perl::Tidy: '20140328'
-  Test::Compile: '1'
-  Test::More: '1'
-  Test::Pod: '1'
+  Test::Compile: v1.2.1
+  Test::More: '1.001009'
+  Test::Pod: '1.48'
   perl: '5.008000'
 resources:
   bugtracker: https://github.com/fibo/Task-BeLike-FIBO-pm/issues
   homepage: https://metacpan.org/pod/Task::BeLike::FIBO
   license: http://g14n.info/artistic-license
   repository: https://github.com/fibo/Task-BeLike-FIBO-pm
-version: '0.9'
+version: '0.11'

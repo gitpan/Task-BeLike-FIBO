@@ -1,5 +1,9 @@
 package Task::BeLike::FIBO;
-$VERSION = '0.9';
+use strict;
+use warnings;
+
+our $VERSION = '0.11';
+
 1;
 
 __END__
@@ -12,7 +16,7 @@ Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
 =begin HTML
 
-<p><a href="https://metacpan.org/pod/Task::BeLike::FIBO" target="_blank"><img src="https://badge.fury.io/pl/Task-BeLike-FIBO.svg" alt="CPAN version"></a> <a href="https://travis-ci.org/fibo/Task-BeLike-FIBO-pm" target="_blank"><img src="https://travis-ci.org/fibo/Task-BeLike-FIBO-pm.svg?branch=master" alt="Build Status"></a></p>
+<p><a href="https://metacpan.org/pod/Task::BeLike::FIBO" target="_blank"><img alt="CPAN version" src="https://badge.fury.io/pl/Task-BeLike-FIBO.svg"></a> <a href="https://travis-ci.org/fibo/Task-BeLike-FIBO-pm" target="_blank"><img alt="Build Status" src="https://travis-ci.org/fibo/Task-BeLike-FIBO-pm.svg?branch=master"></a></p>
 
 =end HTML
 
@@ -23,14 +27,14 @@ Task::BeLike::FIBO -- Leonardo Pisano a.k.a. Fibonacci
 
 =head1 DESCRIPTION
 
-Hi! I am L<FIBO|https://metacpan.org/author/FIBO> an italian mathematician. I graduated in 2005 at L<Università degli Studi di Genova|http://www.dima.unige.it/> and since then I work doing Business Intelligence and Web Analytics. My boss said: you need Perl. So I started using this language. I like many programming languages, but, Perl really help me to pay my rent.
+Hi! I am L<FIBO|https://metacpan.org/author/FIBO>, an italian mathematician. I graduated in 2005 at L<Università degli Studi di Genova|http://www.dima.unige.it/> and since then I work doing Business Intelligence and Web Analytics. My boss said: you need Perl. So I started using this language. I like many programming languages, but, Perl really help me to pay my rent.
 
 This is a primary about my habits and a collection of modules I use when I write Perl code.
 
 =head1 PACKAGE GUIDELINES
 
 Do not get crazy with automatic generators. I am a mathematician and a coder, not a corporation.
-Every package is different and has different needings. The followings are samples for files I usually need in a package.
+Every package is different and has different needings.
 
 Just use copy and paste and your brain!
 
@@ -40,7 +44,13 @@ Learn from nature: stay as minimal as possible.
 
 =head2 FILES
 
-Follows a list of sample files of a package, named C<MY::Package> for instance: GitHub repo name hence is C<My-Package-pm>.
+Follows a list of sample files I usually include in a package, C<MY::Package> for instance.
+
+I use to create a L<GitHub|https://github.com/> repo named C<My-Package-pm>.
+
+I also use L<Travis CI|https://travis-ci.org/>.
+
+And yes, L<Task::BeLike::FIBO> was created with these guidelines too! So it is a good example of a meta package ^:) I am a mathematician, I told you :D
 
 =over 4
 
@@ -50,8 +60,12 @@ lib/My/Package.pm
 
 This is the main file of the package and looks something like this
 
-    package Task::BeLike::FIBO;
-    $VERSION = '0.1';
+    package My::Package;
+    use strict;
+    use warnings;
+
+    our $VERSION = '0.1';
+
     1;
 
     __END__
@@ -64,11 +78,24 @@ This is the main file of the package and looks something like this
 
     =begin HTML
 
-    <p><a href="https://metacpan.org/pod/TaskMy::Packagerget="_blank"><img src="https://badge.fury.io/pl/TaskMy-Package" alt="CPAN version"></a> <a href="https://travis-ci.org/fibo/TaskMy-Package target="_blank"><img src="https://travis-ci.org/fibo/TaskMy-Packagesvg?branch=master" alt="Build Status"></a></p>
+    <p><a href="https://metacpan.org/pod/My::Package" target="_blank"><img alt="CPAN version" src="https://badge.fury.io/pl/My-Package.svg"></a> <a href="https://travis-ci.org/fibo/My-Package-pm" target="_blank"><img alt="Build Status" src="https://travis-ci.org/fibo/My-Package-pm.svg?branch=master"></a></p>
 
     =end HTML
 
+    =head1 SYNOPSIS
+
+        package Your:Package;
+        use My::Package;
+
+        # Create a My::Package instance.
+        my $foo = My::Package->new;
+
+        # foo goes to a bar, ehm ... to have a coffee.
+        $foo->bar;
+
     =head1 DESCRIPTION
+
+    This is a description of what <My::Package> does, why you maybe want to use it, the motivations behind him.
 
     =head1 COPYRIGHT AND LICENSE
 
@@ -99,7 +126,8 @@ README.md
     --------
     [![CPAN version](https://badge.fury.io/pl/My-Package.svg)](https://metacpan.org/pod/My::Package)
     [![Build Status](https://travis-ci.org/fibo/My-Package-pm.png?branch=master)](https://travis-ci.org/fibo/My-Package-pm)
-    [![C
+
+=item *
 
 .travis.yml
 
@@ -143,24 +171,29 @@ Makefile.PL
         VERSION_FROM  => 'lib/My/Package.pm',
         AUTHOR        => 'G. Casati <fibo@cpan.org>',
         NAME          => 'My::Package',
+        LICENSE      => 'artistic_2',
         MIN_PERL_VERSION => '5.8.0',
         META_MERGE => {
             resources => {
-                homepage   => 'https://metacpan.org/pod/My::Package'
+                homepage   => 'https://metacpan.org/pod/My::Package',
                 license    => 'http://g14n.info/artistic-license',
                 repository => 'https://github.com/fibo/My-Package-pm',
-                bugtracker => 'https://github.com/fibo/My-Package-pm/issues',
+                bugtracker => 'https://github.com/fibo/My-Package-pm/issues'
             },
         },
         PREREQ_PM => {
             # 'Some::Package' => '0',
-            # 'Other::Package' => '1.2.3',
+            # 'Other::Package' => '1.2.3'
+        },
+        # EXE_FILES => ['bin/foo', 'bin/bar'],
+        BUILD_REQUIRES => {
+            'ExtUtils::MakeMaker' => '6.64'
         },
         test => { TESTS => 't/*.t' },
         TEST_REQUIRES => {
-            'Test::Compile' => '1',
-            'Test::More' => '1',
-            'Test::Pod'  => '1',
+            'Test::Compile' => '1.2.1',
+            'Test::More'    => '1.001009',
+            'Test::Pod'     => '1.48'
         }
     );
 
@@ -185,7 +218,7 @@ Changes
 
 It is considered a good habit to keep track of at least major changes to inform users what they should expect when upgrading version.
 
-    2014-12-2 v0.1
+    2014-12-02 v0.1
     + First release
 
 =back
@@ -218,16 +251,28 @@ If some test does not pass, fix code and run tests that failed
 
 =item *
 
-Merge feature branch and commit work
+Commit changes
+
+    $ git commit -am 'added some feature'
+
+Merge feature branch and push
 
     $ git rebase master
     $ git checkout master
     $ git merge somefeature
     $ git push
 
+Delete feature branch
+
+    $ git branch -d somefeature
+
 =item *
 
-Update version, use L<Semantic Versioning|http://semver.org/>.
+Update version, usually in file C<lib/My/Package.pm>.
+
+Use L<Semantic Versioning|http://semver.org/>.
+
+Check that C<Changes> file is updated with modifications.
 
 Create a new release
 
@@ -237,6 +282,11 @@ Create a new release
     $ make manifest
     $ make dist
     $ make realclean
+
+Create a git tag
+
+    $ git tag v0.1
+    $ git push
 
 =item *
 
@@ -285,13 +335,9 @@ Create a C<t/_compile.t> file
     use strict;
     use warnings;
     use Test::More;
-    
-   
-    e Test::Compile";
-    Test::More->builder->BAIL_OUT(<<EOF) if $@;
-    Test::Compile required for testing compilation
-    EOF
-
+    eval "use Test::Compile";
+    plan skip_all => "Test::Compile required for testing compilation"
+      if $@;
     all_pm_files_ok();
 
 =item *
@@ -307,15 +353,10 @@ Create a C<t/_pod.t> file
     use strict;
     use warnings;
     use Test::More;
-    
-    eva
-    st::Pod";
-    Test::More->builder->BAIL_OUT(<<EOF) if $@;
-    Test::Pod required for testing compilation
-    EOF
-    
-    all_pod
-    ();
+    eval "use Test::Pod";
+    plan skip_all => "Test::Pod required for testing POD"
+      if $@;
+    all_pod_files_ok();
 
 =back
 
