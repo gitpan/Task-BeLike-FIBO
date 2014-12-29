@@ -8,7 +8,7 @@ WriteMakefile(
     VERSION_FROM     => 'lib/Task/BeLike/FIBO.pm',
     AUTHOR           => 'G. Casati <fibo@cpan.org>',
     NAME             => 'Task::BeLike::FIBO',
-    LICENSE      => 'artistic_2',
+    LICENSE          => 'artistic_2',
     MIN_PERL_VERSION => '5.8.0',
     META_MERGE       => {
         resources => {
@@ -22,6 +22,7 @@ WriteMakefile(
         'CPAN'                => '2.05',
         'CPAN::Uploader'      => '0.103007',
         'ExtUtils::MakeMaker' => '6.64',
+        'Module::CoreList'    => '5',
         'Perl::Tidy'          => '20140328',
         'Test::Compile'       => '1.2.1',
         'Test::More'          => '1.001009',
@@ -32,9 +33,9 @@ WriteMakefile(
     },
     test          => { TESTS => 't/*.t' },
     TEST_REQUIRES => {
-        'Test::Compile' => '1.2.1',
-        'Test::More'    => '1.001009',
-        'Test::Pod'     => '1.48'
+        'Test::Compile'      => '1.2.1',
+        'Test::More'         => '1.001009',
+        'Test::Pod'          => '1.48'
     }
 );
 

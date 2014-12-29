@@ -10,7 +10,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.142690'
+generated_by: 'ExtUtils::MakeMaker version 7.04, CPAN::Meta::Converter version 2.143240'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -24,6 +24,7 @@ requires:
   CPAN: '2.05'
   CPAN::Uploader: '0.103007'
   ExtUtils::MakeMaker: '6.64'
+  Module::CoreList: '5'
   Perl::Tidy: '20140328'
   Test::Compile: v1.2.1
   Test::More: '1.001009'
@@ -34,4 +35,4 @@ resources:
   homepage: https://metacpan.org/pod/Task::BeLike::FIBO
   license: http://g14n.info/artistic-license
   repository: https://github.com/fibo/Task-BeLike-FIBO-pm
-version: '0.11'
+version: '0.12'

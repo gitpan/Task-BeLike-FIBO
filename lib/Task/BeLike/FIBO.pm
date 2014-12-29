@@ -2,7 +2,7 @@ package Task::BeLike::FIBO;
 use strict;
 use warnings;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 1;
 
@@ -191,11 +191,22 @@ Makefile.PL
         },
         test => { TESTS => 't/*.t' },
         TEST_REQUIRES => {
-            'Test::Compile' => '1.2.1',
-            'Test::More'    => '1.001009',
-            'Test::Pod'     => '1.48'
+            'Test::Compile'      => '1.2.1',
+            'Test::More'         => '1.001009',
+            'Test::Pod'          => '1.48'
         }
     );
+
+A note about versions in C<PREREQ_PM>: keep in mind that when specifying a version for core modules, it should match the version shipped with Perl version C<MIN_PERL_VERSION>.
+
+The L<corelist> app is your friend.
+
+For example if I want to figure out which version of L<File::Path> I should require, if the lower Perl version I am supporting is C<5.8.0> I launch
+
+    $ corelist -a File::Path | grep v5.8.0
+      v5.8.0     1.05
+
+so I know I should go for C<1.05>.
 
 =item *
 
@@ -317,6 +328,12 @@ L<CPAN::Uploader> to release modules using a cli. It also depends on L<LWP::Prot
 =item *
 
 L<ExtUtils::MakeMaker> version C<6.64>, cause I use the C<TEST_REQUIRES> option.
+
+=item *
+
+L<Module::CoreList>
+
+It is a core module since Perl C<v5.8.9>.
 
 =item *
 
